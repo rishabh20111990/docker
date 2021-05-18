@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag cinder_vol:1.0
+
+- name: Scan image
+      uses: sysdiglabs/scan-action@v1
+      with:
+        image-tag: "docker/cinder_vol:1.0"
+        sysdig-secure-token: ${{ secrets.SYSDIG_SECURE_TOKEN }}
