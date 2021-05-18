@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag cinder_vol:1.0
 
-- name: Scan image
+    - name: Scan image
       uses: sysdiglabs/scan-action@v1
       with:
         image-tag: "docker/cinder_vol:1.0"
