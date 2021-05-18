@@ -20,6 +20,6 @@ jobs:
     - name: Scan image
       uses: sysdiglabs/scan-action@v1
       with:
-        image-tag: "docker/cinder_vol:1.0"
+        image-tag: "sysdiglabs/cinder_vol:1.0"
         sysdig-secure-token: "DOCKERSCAN"
         
