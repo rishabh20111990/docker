@@ -1,4 +1,4 @@
-FROM registry.redhat.io/rhosp-rhel8/openstack-cinder-volume:16.1.5-3
+FROM osism/cinder-volume
 LABEL name="rhosp16/openstack-cinder-volume-hpe" \
       maintainer="sneha.rai@hpe.com" \
       vendor="HPE" \
