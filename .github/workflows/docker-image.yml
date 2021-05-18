@@ -15,11 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag cinder_vol:1.0
+      run: docker build . --file Dockerfile --tag sysdiglabs/cinder_vol:1.0
 
     - name: Scan image
       uses: sysdiglabs/scan-action@v1
       with:
         image-tag: "sysdiglabs/cinder_vol:1.0"
-        sysdig-secure-token: ${{ secrets.DOCKERSCAN }}
+        sysdig-secure-token: "Roomnub@401"
         
