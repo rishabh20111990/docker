@@ -1,4 +1,4 @@
-FROM osism/cinder-volume
+FROM osism/cinder-volume:train
 LABEL name="rhosp16/openstack-cinder-volume-hpe" \
       maintainer="sneha.rai@hpe.com" \
       vendor="HPE" \
